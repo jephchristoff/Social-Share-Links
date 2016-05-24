@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Social Share Links</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<script>
+	  // Facebook Config
+	  window.fbAsyncInit = function() {
+	    FB.init({appId: 'INSERT_APP_ID', status: true, cookie: true,
+	             xfbml: true});
+	  };
+	  (function() {
+	    var e = document.createElement('script'); e.async = true;
+	    e.src = document.location.protocol +
+	      '//connect.facebook.net/en_US/all.js';
+	    document.getElementById('fb-root').appendChild(e);
+	  }());
+	  
+	  (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=283689258407776&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+    
+    
+    
+    <div class="social-icons-wrap clearfix">
+    <ul class="social-icons">
+       
+      <li class="social-icon facebook">
+        <a class="shareLink" href="https://www.facebook.com/dialog/share?app_id=INSERT_APP_ID&href=INSERT_URL&display=page&redirect_uri=http://facebook.com" target="_blank"><i class="fa fa-facebook-square"></i><span class="verb">Share on Facebook</span></a>
+      </li>
+      <li class="social-icon twitter">
+        <a class="shareLink" href="https://twitter.com/share?&amp;url=INSERT_URL&amp;text=INSERT_TEXT&amp;via=INSERT_TWITTER_ACCOUNT" target="_blank"><i class="fa fa-twitter"></i><span class="verb">Share on Twitter</span></a>
+      </li>
+      <li class="social-icon email">
+        <a class="shareLink" href="mailto:?subject=INSERT_TITLE&amp;body=INSERT_URL" target="_blank"><i class="fa fa-envelope"></i><span class="verb">Share via Email</span></a>
+      </li>
+    </ul>
+</div>
+</body>
+</html>
